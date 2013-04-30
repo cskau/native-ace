@@ -1,0 +1,64 @@
+QScrollBar,
+QStatusBar,
+QMainWindow,
+QWebView,
+QTabWidget {
+  background: #333;
+  color: #ddd;
+  border: 0;
+  margin: 0;
+}
+
+QFileDialog {
+}
+
+QStatusBar::item {
+  border: 0px solid black;
+}
+
+QTabWidget::pane,
+QTabWidget::tab-bar {
+  border: 0;
+  margin: 0;
+}
+
+QTabBar {
+  background-color: #666;
+  color: white;
+}
+QTabBar * {
+  background-color: #444;
+  color: black;
+}
+QTabBar::close-button {
+}
+QTabBar::close-button:hover {
+}
+QTabBar::tab {
+  width: 30ex;
+  height: 3ex;
+  /* extend outwards to hold entire close button */
+  border-top-left-radius: 1ex;
+  border-top-right-radius: 1ex;
+  background: qlineargradient(
+      x1: 0, y1: 0,
+      x2: 0, y2: 1,
+      stop: 0 #555,
+      stop: 1 #111
+      );
+}
+QTabBar::tab:selected {
+/*
+  background-color: #555;
+*/
+}
+QTabBar::tab:!selected {
+  height: 2.7ex;
+  margin-top: .3ex;
+  background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 1 #464646, stop: 0 #5D5D5D);
+}
+QTabBar::tab:hover {
+/*
+  background-color: #777;
+*/
+}

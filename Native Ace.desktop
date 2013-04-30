@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Text Editor
+Encoding=UTF-8
+Terminal=false
+Type=Application
+MimeType=text/plain;text/html;text/xml;
+Name=Native Ace
+Exec=/home/user/Dropbox/source/Native\ Ace/native_ace.py %U
+Icon=/home/user/Dropbox/source/Native Ace/img/na128.png
