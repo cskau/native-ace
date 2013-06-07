@@ -3,16 +3,19 @@
 
 
 top = '.'
-out = 'build'
+out = '.'
 
 
 def configure(ctx):
   pass
 
-def build(ctx):
-  # copy over pre-built Ace files from submodule
-  ctx(
+def build(bld):
+  bld(
+      rule='mkdir -p ${TGT}',
+      target='js/ace/',
+      )
+  bld(
       rule='cp ${SRC} ${TGT}',
-      source='submodules/ace-builds/src-min-noconflict/*',
+      source=bld.path.ant_glob('submodules/ace-builds/src-min-noconflict/*'),
       target='js/ace/',
       )
