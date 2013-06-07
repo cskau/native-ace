@@ -27,7 +27,9 @@
           editor.getSession().setMode("ace/mode/javascript");
           editor.setFontSize(20);
           editor.setHighlightActiveLine(true);
+          editor.setHighlightGutterLine(true);
           editor.setDisplayIndentGuides(true);
+          editor.setWrapBehavioursEnabled(true);
           editor.setKeyboardHandler("ace/keyboard/vim");
           editor.setShowInvisibles(true);
           editor.renderer.setHScrollBarAlwaysVisible(false);
@@ -69,8 +71,18 @@
     function getMode() {
       return editor.getSession().getMode().$id;
     }
-    //setTabSize(Number tabSize)
-    //setUseSoftTabs(Boolean useSoftTabs)
+    function setMode(mode) {
+      return editor.getSession().setMode(mode);
+    }
+    function getIndent() {
+      return {
+        'tabSize': editor.getSession().getTabSize(),
+        'useSoftTabs': editor.getSession().getUseSoftTabs()
+      }
+    }
+    function transpose() {
+      editor.transposeLetters();
+    }
   </script>
 </body>
 </html>

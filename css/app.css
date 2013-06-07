@@ -1,9 +1,12 @@
-QScrollBar,
-QStatusBar,
+/* This stylesheet is for the QT app */
+
 QMainWindow,
-QWebView,
-QTabWidget {
-  background: #333;
+QMainWindow QTabWidget,
+QMainWindow QWebView,
+QMainWindow QStatusBar,
+QMainWindow QLabel,
+QMainWindow QScrollBar {
+  background: #666;
   color: #ddd;
   border: 0;
   margin: 0;
@@ -14,6 +17,7 @@ QFileDialog {
 
 QStatusBar::item {
   border: 0px solid black;
+  color: #ddd;
 }
 
 QTabWidget::pane,
